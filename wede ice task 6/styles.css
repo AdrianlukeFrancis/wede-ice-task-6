@@ -1,0 +1,76 @@
+/* Basic styles for the box layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box img {
+    margin-right: 10px;
+}
+
+.box p {
+    text-align: left;
+}
+
+/* Desktop layout */
+@media (min-width: 769px) {
+    .box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .box img {
+        margin-right: 15px;
+        max-width: 150px;
+    }
+
+    .box p {
+        text-align: left;
+        flex: 1;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box img {
+        margin: 0 0 15px 0;
+    }
+
+    .box p {
+        text-align: center;
+    }
+}
